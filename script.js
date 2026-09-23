@@ -3,7 +3,7 @@ const foods = [
   { name: "Margherita Pizza", price: 150.00 },
   { name: "Chicken Teriyaki Bowl", price: 80.00 },
   { name: "Garden Fresh Salad", price: 599.99 },
-  { name: "Chocolate Lava Cake", price: 1,499.00 }
+  { name: "Chocolate Lava Cake", price: 1499.00 }
 ];
 
 // Add your Supabase project values here before publishing the app.
