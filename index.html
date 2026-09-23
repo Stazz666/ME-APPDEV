@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">FO</div>
+      <div class="brand-copy">
+        <p class="eyebrow">Quick service kitchen</p>
+        <h1>Food Order</h1>
+      </div>
+      <span class="open-badge">Open today</span>
+    </header>
+
+    <section class="order-panel" aria-labelledby="order-heading">
+      <div class="panel-heading">
+        <p class="eyebrow eyebrow-dark">New order</p>
+        <h2 id="order-heading">What would you like?</h2>
+        <p class="panel-copy">Pick your meal and place your order in a few quick steps.</p>
+      </div>
+
+      <form id="order-form">
+        <label for="customer-name">Customer Name</label>
+        <input id="customer-name" name="customerName" type="text" placeholder="Enter your name" required>
+
+        <label for="food">Choose Food</label>
+        <select id="food" name="food" required></select>
+
+        <div class="details-grid">
+          <div>
+            <label for="price">Price</label>
+            <output id="price" class="value-output">0.00</output>
+          </div>
+          <div>
+            <label for="quantity">Quantity</label>
+            <input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <span>Total</span>
+          <output id="total">$0.00</output>
+        </div>
+
+        <button type="submit">Place Order <span aria-hidden="true">→</span></button>
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
